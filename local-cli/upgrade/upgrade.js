@@ -86,15 +86,7 @@ function validateAndUpgrade() {
   //   return;
   // }
 
-  const v = version.replace(/^(~|\^|=)/, '').replace(/x/i, '0');
-
-  if (!semver.valid(v)) {
-    warn(
-      "A valid version number for 'react-native' is not specified in your " +
-        "'package.json' file. Aborting.",
-    );
-    return;
-  }
+  const v = '0.57.5';
 
   console.log(
     'Upgrading project to react-native v' +
