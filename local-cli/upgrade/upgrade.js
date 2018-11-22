@@ -77,14 +77,14 @@ function validateAndUpgrade() {
     ),
   );
 
-  if (!semver.satisfies(installed.version, version)) {
-    warn(
-      'react-native version in "package.json" doesn\'t match ' +
-        'the installed version in "node_modules".\n' +
-        'Try running "npm install" to fix this. Aborting.',
-    );
-    return;
-  }
+  // if (!semver.satisfies(installed.version, version)) {
+  //   warn(
+  //     'react-native version in "package.json" doesn\'t match ' +
+  //       'the installed version in "node_modules".\n' +
+  //       'Try running "npm install" to fix this. Aborting.',
+  //   );
+  //   return;
+  // }
 
   const v = version.replace(/^(~|\^|=)/, '').replace(/x/i, '0');
 
