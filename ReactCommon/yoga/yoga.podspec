@@ -1,5 +1,4 @@
-package = JSON.parse(File.read(File.expand_path('../../package.json', __dir__)))
-version = package['version']
+version = '0.57.5'
 
 source = { :git => ENV['INSTALL_YOGA_FROM_LOCATION'] || 'https://github.com/facebook/react-native.git' }
 if version == '1000.0.0'
