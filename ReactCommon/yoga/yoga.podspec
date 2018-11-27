@@ -1,12 +1,7 @@
-version = '0.57.5'
+version = '0.57.5-kdv'
 
-source = { :git => ENV['INSTALL_YOGA_FROM_LOCATION'] || 'https://github.com/facebook/react-native.git' }
-if version == '1000.0.0'
-  # This is an unpublished version, use the latest commit hash of the react-native repo, which we’re presumably in.
-  source[:commit] = `git rev-parse HEAD`.strip
-else
-  source[:tag] = "v#{version}"
-end
+source = { :git => ENV['INSTALL_YOGA_FROM_LOCATION'] || 'https://github.com/kingsmendv/react-native.git' }
+source[:tag] = "0.57-stable-polyfill-fix"
 
 Pod::Spec.new do |spec|
   spec.name = 'yoga'
